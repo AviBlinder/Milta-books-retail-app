@@ -12,13 +12,13 @@ const LandingPage = () => {
           className="z-0 adjusted-image"
         />
         <div
-          className="absolute top-20 right-[55px] lg:top-40 lg:left-20 lg:py-10    
-        flex flex-col items-center px-20 "
+          className="absolute top-20 left-[30px] right-[0px] lg:top-15 lg:left-[0px] lg:right-[2px]    
+        flex flex-col items-center"
         >
-          <h1 className="text-6xl md:text-6xl lg:text-[100px] font-bold text-white tracking-wider">
+          <h1 className="text-[80px] md:text-[100px] lg:text-[120px] font-bold text-white tracking-wider">
             מִילְתָא
           </h1>
-          <p className="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-white">
+          <p className="mt-2 text-[40px] md:text-[70px] lg:text-[80px] text-white lg:ml-4">
             חנות ספרים
           </p>
           <a
@@ -28,17 +28,19 @@ const LandingPage = () => {
             הנחות חורף
           </a>
         </div>
-        <div className="absolute bottom-0 left-0 w-full ">
+        {/* <div className="absolute h-80 md:h-150 bottom-0 left-0 w-full ">
           <Image
             src="/assets/images/wave.png"
             alt="Wave Design"
             layout="responsive"
             width={500}
-            height={500}
+            height={100}
             objectFit="cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="z-10 "
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
