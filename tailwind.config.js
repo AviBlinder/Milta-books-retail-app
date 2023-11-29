@@ -12,24 +12,37 @@ module.exports = {
       //   'gradient-conic':
       //     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       // },
-      extend: {
-        color: {
-          'bridal-900': '#F5E9DB',
-          'bridal-800': '#f6ebde',
-          'bridal-700': '#f7ede2',
+      colors: {
+        primary: {
+          900: '#19216C',
+          800: '#647ACB',
+          700: '#2D3A8C',
+          600: '#7B93DB',
+          500: '#35469C',
+          400: '#98AEEB',
+          300: '#4055A8',
+          200: '#BED0F7',
+          100: '#4C63B6',
+          50: '#E0E8F9',
         },
-        brightness: {
-          113: '1.13',
+
+        bridal: {
+          900: '#F5E9DB',
+          800: '#f6ebde',
+          700: '#f7ede2',
         },
-        contrast: {
-          113: '1.13',
-        },
-        saturate: {
-          120: '1.2',
-        },
-        sepia: {
-          8: '.08',
-        },
+      },
+      brightness: {
+        113: '1.13',
+      },
+      contrast: {
+        113: '1.13',
+      },
+      saturate: {
+        120: '1.2',
+      },
+      sepia: {
+        8: '.08',
       },
     },
   },

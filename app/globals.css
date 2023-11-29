@@ -6,3 +6,7 @@
   /* @apply filter brightness-[1.13] contrast-[1.13] saturate-[1.2] sepia-[.08] */
   @apply brightness-125 contrast-75 saturate-[1.2] sepia-[.08];
 }
+
+.button-main {
+  @apply bg-primary-900;
+}

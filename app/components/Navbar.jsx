@@ -37,7 +37,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-6 w-6 text-gray-900" aria-hidden="true" />
           </button>
         </div>
         {/* Desktop Menu  */}
@@ -46,7 +46,7 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-2xl font-semibold tracking-wide leading-6 text-white"
+              className="text-2xl font-semibold tracking-wide leading-6 text-white hover:bg-bridal-800 hover:text-gray-800 px-8 py-4 rounded-xl"
             >
               {item.name}
             </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-blue-200 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-bridal-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Milta Books Logo</span>
@@ -75,7 +75,7 @@ export default function Navbar() {
             </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-400"
+              className="-m-2.5 rounded-md p-2.5 text-gray-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -89,7 +89,7 @@ export default function Navbar() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-20 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                    className="-mx-3 block rounded-lg px-20 py-2 text-2xl  font-semibold leading-7 text-gray-500 hover:bg-gray-800"
                   >
                     {item.name}
                   </a>
