@@ -13,6 +13,11 @@ module.exports = {
       //     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       // },
       extend: {
+        color: {
+          'bridal-900': '#F5E9DB',
+          'bridal-800': '#f6ebde',
+          'bridal-700': '#f7ede2',
+        },
         brightness: {
           113: '1.13',
         },
