@@ -7,6 +7,10 @@
   @apply brightness-125 contrast-75 saturate-[1.2] sepia-[.08];
 }
 
-.button-main {
-  @apply bg-primary-900;
+.main-class {
+  @apply flex min-h-screen flex-col items-center justify-between p-24;
+}
+
+.secondary-class {
+  @apply z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex;
 }
