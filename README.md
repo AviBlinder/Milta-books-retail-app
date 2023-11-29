@@ -1,3 +1,10 @@
+1. Add last page according to design
+2. Add שיר לשבת
+3. Add animation on page load
+4. Connect contents to Headless CMS
+5. Add Google Map with location
+6. CTA?
+
 Bellefair
 
 ```js

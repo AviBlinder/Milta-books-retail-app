@@ -28,19 +28,10 @@ const LandingPage = () => {
             הנחות חורף
           </a>
         </div>
-        {/* <div className="absolute h-80 md:h-150 bottom-0 left-0 w-full ">
-          <Image
-            src="/assets/images/wave.png"
-            alt="Wave Design"
-            layout="responsive"
-            width={500}
-            height={100}
-            objectFit="cover"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="z-10 "
-          />
-        </div> */}
+        <img
+          className="hidden md:block absolute bottom-0 h-full w-screen"
+          src="/assets/images/wave.png"
+        ></img>
       </div>
     </div>
   );

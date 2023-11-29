@@ -1,4 +1,3 @@
-import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 const people = [
   {
@@ -33,7 +32,7 @@ export default function RecommendedBooks() {
         </div>
         <ul
           role="list"
-          className="w-full grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-9 
+          className="w-full grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-9 
           lg:grid-cols-12"
         >
           {people.map((person, index) => (
@@ -44,14 +43,14 @@ export default function RecommendedBooks() {
               bg-white text-center shadow "
             >
               <div className="flex flex-col">
-                <div className="h-1/2">
+                <div className="h-3/5">
                   <img
                     className="w-full h-full object-cover"
                     src={person.imageUrl}
                     alt="book image"
                   />
                 </div>
-                <div className="h-1/2">
+                <div className="h-2/5">
                   <h3 className="mt-6 text-3xl text-slate-600 font-medium ">
                     {person.name}
                   </h3>
