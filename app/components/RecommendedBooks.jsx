@@ -4,27 +4,18 @@ const people = [
   {
     name: 'Jane Cooper',
     title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
   {
     name: 'Jane Cooper',
     title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
   {
     name: 'Jane Cooper',
     title: 'Paradigm Representative',
-    role: 'Admin',
-    email: 'janecooper@example.com',
-    telephone: '+1-202-555-0170',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
@@ -34,17 +25,20 @@ export default function RecommendedBooks() {
   return (
     <div className="bg-bridal-900">
       <div
-        className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:flex lg:items-center
+        className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:flex lg:flex-col lg:items-center
        lg:justify-between"
       >
+        <div className="text-4xl md:text-6xl font-medium flex justify-center align-middle text-primary-700 mb-6">
+          <h1> המומלצים שלנו</h1>
+        </div>
         <ul
           role="list"
           className="w-full grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-9 
           lg:grid-cols-12"
         >
-          {people.map((person) => (
+          {people.map((person, index) => (
             <li
-              key={person.email}
+              key={index}
               className="col-span-1 md:col-span-3 lg:col-span-4  
               flex flex-col divide-y divide-gray-200 rounded-lg 
               bg-white text-center shadow "
