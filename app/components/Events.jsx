@@ -23,7 +23,7 @@ const EventsComponent = () => {
     <div className="bg-bridal-900" id="Events">
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:flex lg:flex-col lg:items-center
-       lg:justify-between pb-8"
+       lg:justify-between"
       >
         <div className="text-4xl md:text-6xl font-medium flex justify-center align-middle text-primary-700 mb-6">
           <h1> אירועים קרובים</h1>
