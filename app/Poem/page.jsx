@@ -3,14 +3,17 @@ import React from 'react';
 
 const PoemPage = () => {
   return (
-    <div className="bg-bridal-900" id="Events">
+    <div className="bg-bridal-900">
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:flex lg:flex-col lg:items-center
        lg:justify-between pb-8"
       >
-        <div className=" mt-10 text-white min-h-screen flex flex-col items-center justify-center p-4">
+        <div className=" my-2 text-white min-h-screen flex flex-col items-center justify-center p-4">
           <div className="max-w-2xl mx-auto">
-            <h1 className="text-4xl font-bold mb-6 text-center text-amber-600">
+            <h1
+              className="text-4xl font-bold mb-6 text-center text-amber-600"
+              id="WeeklyPoem"
+            >
               שיר השבוע
             </h1>
             <div className="flex flex-col md:flex-row">
