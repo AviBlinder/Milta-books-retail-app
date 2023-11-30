@@ -40,12 +40,12 @@ export default function RecommendedBooks() {
               key={index}
               className="col-span-1 md:col-span-3 lg:col-span-4  
               flex flex-col divide-y divide-gray-200 rounded-lg 
-              bg-white text-center shadow "
+              bg-white text-center shadow"
             >
-              <div className="flex flex-col">
-                <div className="h-3/5">
+              <div className="flex flex-col ">
+                <div className="h-3/5 ">
                   <img
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-t-lg"
                     src={person.imageUrl}
                     alt="book image"
                   />

@@ -62,7 +62,7 @@ const EventsComponent = () => {
             </div>
           </div>
 
-          <div className="hidden md:grid grid-cols-6 gap-1">
+          <div className="hidden md:grid grid-cols-6 gap-1 shadow-lg">
             <div className="col-span-3  ">
               <img
                 src="/assets/images/JazzEvent1.jpg"
