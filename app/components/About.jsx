@@ -17,6 +17,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="col-span-1 mt-2 md:mt-4">
             <img
+              id="About"
               src="/assets/images/OraNiv-MiltaOwner.png"
               alt="Events"
               className="rounded-lg shadow-md h-full object-cover"

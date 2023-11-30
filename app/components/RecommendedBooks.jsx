@@ -28,7 +28,7 @@ export default function RecommendedBooks() {
        lg:justify-between"
       >
         <div className="text-4xl md:text-6xl font-medium flex justify-center align-middle text-primary-700 mb-6">
-          <h1> המומלצים שלנו</h1>
+          <h1 id="Recommended"> המומלצים שלנו</h1>
         </div>
         <ul
           role="list"

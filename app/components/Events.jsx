@@ -20,7 +20,7 @@ const events = [
 
 const EventsComponent = () => {
   return (
-    <div className="bg-bridal-900">
+    <div className="bg-bridal-900" id="Events">
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:flex lg:flex-col lg:items-center
        lg:justify-between pb-8"

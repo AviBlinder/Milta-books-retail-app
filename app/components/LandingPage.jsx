@@ -2,7 +2,10 @@ import Image from 'next/image';
 
 const LandingPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-900">
+    <div
+      className="flex min-h-screen flex-col items-center justify-center bg-gray-900"
+      id="Home"
+    >
       <div className="relative w-full flex-grow overflow-hidden">
         <Image
           src="/assets/images/HeroImage.png"
