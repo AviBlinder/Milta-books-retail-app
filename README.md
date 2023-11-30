@@ -1,9 +1,14 @@
 1. Add last page according to design
-2. Add שיר לשבת
-3. Add animation on page load
-4. Connect contents to Headless CMS
-5. Add Google Map with location
-6. CTA?
+2. Add שיר לשבת (According to "Contents UI" page)
+3. Fix Navigation links
+4. Add animation on page load
+
+---
+
+5. Connect contents to Headless CMS (review options on Vercel)
+6. Add Google Map with location as right-sliding Modal
+7. CTA?
+8. Contact Form Page
 
 Bellefair
 
