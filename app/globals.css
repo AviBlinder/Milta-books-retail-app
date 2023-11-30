@@ -7,6 +7,14 @@
   @apply brightness-125 contrast-75 saturate-[1.2] sepia-[.08];
 }
 
+.header_gradient {
+  /* bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500  */
+  /* bg-gradient-to-b from-amber-800/60 via-amber-500/50 to-amber-900/70 ;
+ */
+  @apply bg-gradient-to-b from-amber-100 via-amber-200 to-amber-700
+  bg-clip-text text-transparent;
+}
+
 .main-class {
   @apply flex min-h-screen flex-col items-center justify-between p-24;
 }

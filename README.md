@@ -1,6 +1,6 @@
-2. Add שיר לשבת (According to "Contents UI" page)
-3. Fix Navigation links
-4. Add animation on page load
+1. Add שיר לשבת (According to "Contents UI" page)
+2. Add animation on page load
+3. Check navigation on Vercel mobile size
 
 ---
 

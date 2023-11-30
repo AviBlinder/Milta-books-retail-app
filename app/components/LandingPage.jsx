@@ -16,12 +16,15 @@ const LandingPage = () => {
         />
         <div
           className="absolute top-20 left-[30px] right-[0px] lg:top-15 lg:left-[0px] lg:right-[2px]    
-        flex flex-col items-center"
+        flex flex-col items-center "
         >
-          <h1 className="text-[80px] md:text-[100px] lg:text-[120px] font-bold text-white tracking-wider">
+          <h1
+            className="text-[80px] md:text-[100px] lg:text-[120px] font-bold 
+          header_gradient  tracking-wider"
+          >
             מִילְתָא
           </h1>
-          <p className="mt-2 text-[40px] md:text-[70px] lg:text-[80px] text-white lg:ml-4">
+          <p className="mt-2 text-[40px] md:text-[70px] lg:text-[80px] header_gradient lg:ml-4">
             חנות ספרים
           </p>
           <a
