@@ -10,9 +10,9 @@ const LandingPage = () => {
         <Image
           src="/assets/images/HeroImage.png"
           alt="Milta Books Store"
-          layout="fill"
-          objectFit="cover"
-          className="z-0 adjusted-image"
+          fill
+          // objectFit="cover"
+          className="z-0 adjusted-image object-cover"
         />
         <div
           className="absolute top-20 left-[30px] right-[0px] lg:top-15 lg:left-[0px] lg:right-[2px]    
