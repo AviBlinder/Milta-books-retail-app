@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 
 const navigation = [
   { name: 'אודות', href: 'About' },
-  { name: 'שיר השבוע', href: 'Poem' },
+  { name: 'שיר השבוע', href: 'WeeklyPoem' },
   { name: 'אירועים', href: 'Events' },
   { name: 'מומלצים', href: 'Recommended' },
 ];
@@ -60,7 +60,6 @@ export default function Navbar() {
             />
           </Link>
         </div>
-        <p>{hasScrolled}</p>
         {/* Mobile Menu */}
         <div className="flex lg:hidden">
           <button
@@ -117,7 +116,7 @@ export default function Navbar() {
               smooth={true}
               offset={-70}
               duration={500}
-              className="-m-1.5 p-1.5"
+              className="-m-1.5 p-4"
             >
               <span className="sr-only">Milta Books</span>
               <img
