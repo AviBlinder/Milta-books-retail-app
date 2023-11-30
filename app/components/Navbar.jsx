@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 
 const navigation = [
   { name: 'אודות', href: 'About' },
-  { name: 'שיר השבוע', href: 'WeeklyStory' },
+  { name: 'שיר השבוע', href: 'Poem' },
   { name: 'אירועים', href: 'Events' },
   { name: 'מומלצים', href: 'Recommended' },
 ];
