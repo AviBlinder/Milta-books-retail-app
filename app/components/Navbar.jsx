@@ -36,8 +36,8 @@ export default function Navbar() {
   return (
     <header
       className={`${
-        hasScrolled ? 'sticky bg-gray-100/95' : 'absolute'
-      } inset-x-0 top-0 z-50`}
+        hasScrolled ? 'sticky bg-slate-50/70' : 'absolute'
+      } inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out`}
     >
       <nav
         className="flex items-center justify-between py-2 lg:px-8 "
@@ -54,7 +54,7 @@ export default function Navbar() {
           >
             <span className="sr-only">Milta Books</span>
             <img
-              className="h-8 w-auto rounded-full"
+              className="h-12 w-auto rounded-full"
               src="assets/icons/MiltaLogo.png"
               alt="Milta Books Logo"
             />
@@ -85,8 +85,8 @@ export default function Navbar() {
               key={item.name}
               className={`${
                 hasScrolled
-                  ? ' bg-transparent text-gray-700 hover:bg-bridal-900 '
-                  : 'bg-transparent text-white hover:bg-bridal-900 hover:text-gray-800'
+                  ? 'text-gray-700 hover:bg-bridal-900 hover:underline hover:underline-offset-4'
+                  : 'bg-transparent text-white hover:underline hover:underline-offset-4'
               } text-2xl font-semibold tracking-wide leading-6 
                  
               px-6 py-2 hover:cursor-pointer rounded-xl`}
