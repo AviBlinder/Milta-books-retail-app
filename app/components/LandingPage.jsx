@@ -33,7 +33,7 @@ const LandingPage = () => {
         </div>
         <img
           className="hidden md:block absolute bottom-0 h-full w-screen"
-          src="/assets/images/wave.png"
+          src="/assets/images/Wave.png"
         ></img>
       </div>
     </div>
