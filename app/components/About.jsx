@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import { useState, useEffect } from 'react';
 import { FaFacebook, FaPhoneAlt } from 'react-icons/fa';
 import { MdOutlineMail } from 'react-icons/md';
 
@@ -7,6 +8,13 @@ const About = () => {
     backgroundColor: '#191919',
     color: '#D8D355',
   };
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+    return () => {
+      setIsVisible(false);
+    };
+  }, []);
 
   return (
     <div style={divStyle}>
@@ -25,12 +33,19 @@ const About = () => {
           </div>
           <div className="col-span-1" style={divStyle}>
             <div className="grid grid-rows-1 mt-16 md:mt-28 md:grid-rows-8 ">
-              <div className="row-span-1 row-start-1 md:row-span-2 md:row-start-4 ">
+              <div
+                className={`row-span-1 row-start-1 md:row-span-2 md:row-start-4 
+              ${isVisible ? 'animate-slide-down' : ''}`}
+              >
                 <div className="flex justify-center items-center ">
                   <h3 className="text-2xl md:text-5xl"> החנות ברחובות</h3>
                 </div>
               </div>
-              <div className=" row-span-1 md:row-span-4">
+              <div
+                className={`row-span-1 md:row-span-4 ${
+                  isVisible ? 'animate-slide-down' : ''
+                }`}
+              >
                 <div className="flex flex-row justify-center mt-1 md:mt-6 md:flex-row">
                   <div className="flex items-center px-10 flex-col pt-4 md:pt-10">
                     <div>
@@ -81,10 +96,13 @@ const About = () => {
                     aria-hidden="true"
                   />
 
-                  <p className="ml-4 text-white text-xl md:text-2xl">
-                    {' '}
+                  <a
+                    className="ml-4 text-white text-xl md:text-2xl"
+                    href="https://www.facebook.com/miltabooks"
+                    target="_blank"
+                  >
                     https://www.facebook.com/miltabooks
-                  </p>
+                  </a>
                 </div>
                 <div className="flex flex-row py-4 md:py-8">
                   <span className="sr-only">Telephone</span>
@@ -93,10 +111,12 @@ const About = () => {
                     style={divStyle}
                     aria-hidden="true"
                   />
-                  <p className="ml-4 text-white text-xl md:text-2xl">
-                    {' '}
+                  <a
+                    className="ml-4 text-white text-xl md:text-2xl"
+                    href={`mailto:milta.books@gmail.com`}
+                  >
                     milta.books@gmail.com
-                  </p>
+                  </a>
                 </div>
                 <div className="flex flex-row py-4 md:py-8">
                   <span className="sr-only">Telephone</span>
@@ -105,10 +125,12 @@ const About = () => {
                     style={divStyle}
                     aria-hidden="true"
                   />
-                  <p className="ml-4 text-white text-xl md:text-2xl">
-                    {' '}
+                  <a
+                    className="ml-4 text-white text-xl md:text-2xl"
+                    href={`tel:08-649-8979`}
+                  >
                     08-649-8979
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>

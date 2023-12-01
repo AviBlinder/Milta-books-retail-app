@@ -8,9 +8,13 @@ export default function Landing() {
   return (
     <div className="bg-bridal-900">
       <LandingPage />
+
       <RecommendedBooks />
+
       <Events />
+
       <WeeklyPoem />
+
       <About />
     </div>
   );

@@ -1,4 +1,3 @@
-1. Add שיר לשבת (According to "Contents UI" page)
 2. Add animation on page load
 3. Check navigation on Vercel mobile size
 
@@ -9,7 +8,8 @@
 7. CTA?
 8. Contact Form Page
 
-Bellefair
+Internal and External Navigation:
+https://medium.com/@ojogbomichael/same-page-navigation-with-nextjs-bb99cccfda11
 
 ```js
 import Image from 'next/image';

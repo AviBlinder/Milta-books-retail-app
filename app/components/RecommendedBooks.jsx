@@ -33,7 +33,7 @@ export default function RecommendedBooks() {
         <ul
           role="list"
           className="w-full grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-9 
-          lg:grid-cols-12"
+          lg:grid-cols-12 "
         >
           {people.map((person, index) => (
             <li
@@ -42,7 +42,7 @@ export default function RecommendedBooks() {
               flex flex-col divide-y divide-gray-200 rounded-lg 
               bg-white text-center shadow"
             >
-              <div className="flex flex-col ">
+              <div className="flex flex-col animate-slide-down">
                 <div className="h-3/5 ">
                   <img
                     className="w-full h-full object-cover rounded-t-lg"
