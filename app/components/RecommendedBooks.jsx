@@ -23,8 +23,9 @@ const people = [
   },
 ];
 
-export default function RecommendedBooks({ recommendationItems }) {
-  console.log('recommendationItems:', recommendationItems.length);
+// export default function RecommendedBooks({ recommendationItems }) {
+export default function RecommendedBooks() {
+  // console.log('recommendationItems:', recommendationItems.length);
   const getAssetURL = async (asset) => {
     await client.getAsset(asset).then((asset) => {
       console.log(`asset: ${asset.fields.file.url}`);
