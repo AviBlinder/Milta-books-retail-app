@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+import Link from 'next/link';
 const LandingPage = () => {
   return (
     <div
@@ -15,7 +15,7 @@ const LandingPage = () => {
           className="z-0 adjusted-image object-cover"
         />
         <div
-          className="absolute top-20 left-[30px] right-[0px] lg:top-15 lg:left-[0px] lg:right-[2px]    
+          className="absolute top-[68px] left-[30px] right-[0px] lg:top-[100px] lg:left-[0px] lg:-right-[80px]    
         flex flex-col items-center "
         >
           <h1
@@ -28,7 +28,17 @@ const LandingPage = () => {
             חנות ספרים
           </p>
           {/* className="mt-8 rounded-md bg-bridal-900 px-4 py-2 text-base font-semibold text-gray-700 shadow-sm hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2" */}
+
+          <div
+            className="
+            mt-8 md:mt-12 lg:mt-16 z-20
+            text-4xl px-8 py-4 rounded-xl text-amber-200 bg-[#6e4e43]/90
+            hover:cursor-pointer"
+          >
+            <Link href="/about">בואו לבקר</Link>
+          </div>
         </div>
+
         <img
           className="hidden md:block absolute bottom-0 h-full w-screen"
           src="/assets/images/Wave.png"

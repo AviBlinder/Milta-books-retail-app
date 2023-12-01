@@ -2,14 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navigation = [
-  { name: 'אודות', href: 'About' },
-  { name: 'שיר השבוע', href: 'WeeklyPoem' },
-  { name: 'אירועים', href: 'Events' },
-  { name: 'מומלצים', href: 'Recommended' },
+  { name: 'אודות', href: 'about' },
+  { name: 'שיר השבוע', href: 'poem' },
+  { name: 'אירועים', href: 'events' },
+  { name: 'מומלצים', href: 'recommended-books' },
 ];
 
 export default function Navbar() {
@@ -49,14 +50,7 @@ export default function Navbar() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1 hover:cursor-pointer">
-          <Link
-            to="Home"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className="-m-1.5 p-1.5"
-          >
+          <Link href="/">
             <span className="sr-only">Milta Books</span>
             <img
               className="h-12 w-auto rounded-full"
@@ -78,15 +72,10 @@ export default function Navbar() {
         </div>
         {/* Desktop Menu  */}
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
+          {navigation.map((item, index) => (
             <Link
-              activeClass="active"
-              to={item.href} // The href should be the id of the target component
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              key={item.name}
+              key={index}
+              href={item.href}
               className={`${
                 usePathname() != '/'
                   ? 'text-gray-700 hover:bg-bridal-900 hover:underline hover:underline-offset-4'
@@ -117,14 +106,7 @@ export default function Navbar() {
         px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
         >
           <div className="flex items-center justify-between ">
-            <Link
-              to="Home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="-m-1.5 p-4"
-            >
+            <Link href="/" className="-m-1.5 p-4">
               <span className="sr-only">Milta Books</span>
               <img
                 className="h-8 w-auto rounded-full"
@@ -144,15 +126,10 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/25">
               <div className="space-y-2 py-6 flex flex-col items-center">
-                {navigation.map((item) => (
+                {navigation.map((item, index) => (
                   <Link
-                    activeClass="active"
-                    to={item.href} // 'to' prop should match the id attribute of the target component
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    key={item.name}
+                    key={index}
+                    href={item.href} // 'to' prop should match the id attribute of the target component
                     className="-mx-3 block rounded-lg px-20 py-2 text-2xl font-semibold leading-7 text-gray-500 hover:bg-gray-800"
                     onClick={() => setMobileMenuOpen(false)} // Close the mobile menu on click
                   >

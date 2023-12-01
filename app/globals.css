@@ -13,7 +13,7 @@
  */
   /* <div class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ..."></div> */
 
-  @apply bg-gradient-to-b from-amber-200 via-50% to-[#6e4e43] 
+  @apply bg-gradient-to-b from-amber-100 via-amber-100 via-70%  to-75% to-[rgb(110,78,67)] 
   bg-clip-text text-transparent;
 }
 
