@@ -1,5 +1,7 @@
 import React from 'react';
 
+// https://graphql.contentful.com/content/v1/spaces/{SPACE}
+
 const events = [
   {
     title: 'POSTER-MAKING CONTEST',

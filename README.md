@@ -1,12 +1,6 @@
-2. Add animation on page load
-3. Check navigation on Vercel mobile size
-
----
-
-5. Connect contents to Headless CMS (review options on Vercel)
-6. Add Google Map with location as right-sliding Modal
-7. CTA?
-8. Contact Form Page
+1. Connect contents to Headless CMS (review options on Vercel)
+2. Add Google Map with location as right-sliding Modal
+3. Contact Form Page
 
 Internal and External Navigation:
 https://medium.com/@ojogbomichael/same-page-navigation-with-nextjs-bb99cccfda11

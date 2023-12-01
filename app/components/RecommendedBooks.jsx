@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import client from '@/utils/contentfulClient';
+// import { useEffect, useState } from 'react';
+
 const people = [
   {
     name: 'Jane Cooper',
@@ -20,7 +23,15 @@ const people = [
   },
 ];
 
-export default function RecommendedBooks() {
+export default function RecommendedBooks({ recommendationItems }) {
+  console.log('recommendationItems:', recommendationItems.length);
+  const getAssetURL = async (asset) => {
+    await client.getAsset(asset).then((asset) => {
+      console.log(`asset: ${asset.fields.file.url}`);
+      return asset.fields.file.url;
+    });
+  };
+
   return (
     <div className="bg-bridal-900">
       <div

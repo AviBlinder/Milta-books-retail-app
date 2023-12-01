@@ -2,6 +2,19 @@
 import { useState, useEffect } from 'react';
 import { FaFacebook, FaPhoneAlt } from 'react-icons/fa';
 import { MdOutlineMail } from 'react-icons/md';
+import client from '@/utils/contentfulClient';
+
+export async function getStaticProps() {
+  const response = await client.getEntries({ content_type: 'recommendations' });
+  const recommendations = response.items;
+
+  return {
+    props: {
+      recommendations,
+    },
+    revalidate: 604800, // Revalidate at most once a week
+  };
+}
 
 const About = () => {
   const divStyle = {
