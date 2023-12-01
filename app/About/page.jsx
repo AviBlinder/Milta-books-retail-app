@@ -23,8 +23,8 @@ const About = () => {
               className="rounded-lg shadow-md h-full object-cover"
             />
           </div>
-          <div className="col-span-1" style={divStyle}>
-            <div className="grid grid-rows-1 mt-16 md:mt-28 md:grid-rows-8 ">
+          <div className="col-span-1 " style={divStyle}>
+            <div className="grid grid-rows-1 mt-16 md:mt-28 md:grid-rows-8 animate-slide-down">
               <div className="row-span-1 row-start-1 md:row-span-2 md:row-start-4 ">
                 <div className="flex justify-center items-center ">
                   <h3 className="text-2xl md:text-5xl"> החנות ברחובות</h3>

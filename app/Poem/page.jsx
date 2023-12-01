@@ -6,7 +6,7 @@ const PoemPage = () => {
     <div className="bg-bridal-900">
       <div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:flex lg:flex-col lg:items-center
-       lg:justify-between pb-8"
+       lg:justify-between pb-8 animate-slide-down"
       >
         <div className=" my-2 text-white min-h-screen flex flex-col items-center justify-center p-4">
           <div className="max-w-2xl mx-auto">
