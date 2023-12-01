@@ -27,12 +27,7 @@ const LandingPage = () => {
           <p className="mt-2 text-[40px] md:text-[70px] lg:text-[80px] header_gradient lg:ml-4">
             חנות ספרים
           </p>
-          {/* <button
-            href="#"
-            className="mt-8 rounded-md bg-bridal-900 px-4 py-2 text-base font-semibold text-gray-700 shadow-sm hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2"
-          >
-            הנחות חורף
-          </button> */}
+          {/* className="mt-8 rounded-md bg-bridal-900 px-4 py-2 text-base font-semibold text-gray-700 shadow-sm hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2" */}
         </div>
         <img
           className="hidden md:block absolute bottom-0 h-full w-screen"

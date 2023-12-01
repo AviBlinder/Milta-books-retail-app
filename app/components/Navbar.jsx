@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
   { name: 'אודות', href: 'About' },
@@ -36,7 +37,11 @@ export default function Navbar() {
   return (
     <header
       className={`${
-        hasScrolled ? 'sticky bg-slate-50/70' : 'absolute'
+        usePathname() != '/'
+          ? 'sticky bg-slate-50/70'
+          : hasScrolled
+          ? 'sticky bg-slate-50/70'
+          : 'absolute'
       } inset-x-0 top-0 z-50 transition-all duration-300 ease-in-out`}
     >
       <nav
@@ -83,7 +88,9 @@ export default function Navbar() {
               duration={500}
               key={item.name}
               className={`${
-                hasScrolled
+                usePathname() != '/'
+                  ? 'text-gray-700 hover:bg-bridal-900 hover:underline hover:underline-offset-4'
+                  : hasScrolled
                   ? 'text-gray-700 hover:bg-bridal-900 hover:underline hover:underline-offset-4'
                   : 'bg-transparent text-white hover:underline hover:underline-offset-4'
               } text-2xl font-semibold tracking-wide leading-6 

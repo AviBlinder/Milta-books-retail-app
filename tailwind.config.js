@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { color } = require('framer-motion');
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
