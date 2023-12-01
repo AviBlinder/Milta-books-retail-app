@@ -1,10 +1,9 @@
-create 2 new branches:
+create new branches:
 
 1. Connect contents to Headless CMS (review options on Vercel)
-2. Split to pages + modify navbar styling
 
-3. Add Google Map with location as right-sliding Modal
-4. Contact Form Page
+2. Add Google Map with location as right-sliding Modal
+3. Contact Form Page
 
 Internal and External Navigation:
 https://medium.com/@ojogbomichael/same-page-navigation-with-nextjs-bb99cccfda11

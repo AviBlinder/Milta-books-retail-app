@@ -81,8 +81,8 @@ export default function Navbar() {
                   ? 'text-gray-700 hover:bg-bridal-900 hover:underline hover:underline-offset-4'
                   : hasScrolled
                   ? 'text-gray-700 hover:bg-bridal-900 hover:underline hover:underline-offset-4'
-                  : 'bg-transparent text-white hover:underline hover:underline-offset-4'
-              } text-2xl font-semibold tracking-wide leading-6 
+                  : 'bg-transparent text-amber-100 hover:underline hover:underline-offset-4'
+              } text-3xl font-semibold tracking-wider leading-6 
                  
               px-6 py-2 hover:cursor-pointer rounded-xl`}
             >
