@@ -30,9 +30,10 @@ const LandingPage = () => {
           {/* className="mt-8 rounded-md bg-bridal-900 px-4 py-2 text-base font-semibold text-gray-700 shadow-sm hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2" */}
 
           <div
+            // bg-[#6e4e43]/90
             className="
             mt-8 md:mt-12 lg:mt-16 z-20
-            text-4xl px-8 py-4 rounded-xl text-amber-200 bg-[#6e4e43]/90
+            text-4xl px-8 py-4 rounded-xl text-amber-200 hover:bg-[#6e4e43] bg-[#6e4e43]/90
             hover:cursor-pointer"
           >
             <Link href="/about">בואו לבקר</Link>

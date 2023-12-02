@@ -52,7 +52,7 @@ export default function RecommendedBooks() {
               key={index}
               className="col-span-1 md:col-span-3 lg:col-span-4  
               flex flex-col divide-y divide-gray-200 rounded-lg 
-              bg-white text-center shadow transform hover:md:scale-110 transition duration-300 ease-in-out"
+              bg-white text-center shadow transform hover:md:scale-110 transition duration-500 ease-in"
             >
               <div className="flex flex-col">
                 <div className="h-3/5 ">
