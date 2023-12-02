@@ -36,7 +36,7 @@ const LandingPage = () => {
             text-4xl px-8 py-4 rounded-xl text-amber-200 hover:bg-[#6e4e43] bg-[#6e4e43]/90
             hover:cursor-pointer"
           >
-            <Link href="/about">בואו לבקר</Link>
+            <Link href="/About">בואו לבקר</Link>
           </div>
         </div>
 
