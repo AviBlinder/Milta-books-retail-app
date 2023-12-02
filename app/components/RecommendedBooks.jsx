@@ -22,17 +22,39 @@ const people = [
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
 ];
-
-// export default function RecommendedBooks({ recommendationItems }) {
-export default function RecommendedBooks() {
-  // console.log('recommendationItems:', recommendationItems.length);
+const convertNumbers = (number) => {
+  switch (number) {
+    case 1:
+      return '';
+    case 2:
+      return 'שני';
+    case 3:
+      return 'שלושת';
+    case 4:
+      return 'ארבעת';
+    case 5:
+      return 'חמשת';
+    case 6:
+      return 'ששת';
+    case 7:
+      return 'שבעת';
+    case 8:
+      return 'שמונת';
+    case 9:
+      return 'תשעת';
+    default:
+      return number;
+  }
+};
+export default function RecommendedBooks({ recommendationItems }) {
+  console.log('recommendationItems:', recommendationItems.length);
   const getAssetURL = async (asset) => {
     await client.getAsset(asset).then((asset) => {
       console.log(`asset: ${asset.fields.file.url}`);
       return asset.fields.file.url;
     });
   };
-
+  const space = ' ';
   return (
     <div className="bg-bridal-900">
       <div
@@ -40,7 +62,9 @@ export default function RecommendedBooks() {
        lg:justify-between"
       >
         <div className="text-4xl md:text-6xl font-medium flex justify-center align-middle text-primary-700 mb-6">
-          <h1 id="Recommended"> המומלצים שלנו</h1>
+          <h1>
+            {`${convertNumbers(recommendationItems.length)} המומלצים שלנו`}
+          </h1>
         </div>
         <ul
           role="list"
