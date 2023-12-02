@@ -16,9 +16,9 @@ const PoemPage = () => {
             >
               שיר השבוע
             </h1>
-            <div className="flex flex-col md:flex-row animate-slide-down">
-              <div className="bg-gray-800 p-8 rounded-lg shadow-lg mb-6 max-h-7xl">
-                <p className="text-lg mb-4 text-right">
+            <div className="flex flex-col md:flex-row">
+              <div className="bg-gray-800 p-8 rounded-lg shadow-lg mb-6 max-h-7xl animate-slide-inwards-left">
+                <p className="text-lg mb-4 text-right ">
                   <span>,</span>
                   בְּמָה רַע זְמַן זֶה מִזְמַנִּים שֶׁקָדְמוּ לוֹ? הַלוּמֵי
                   קְרָב
@@ -45,13 +45,13 @@ const PoemPage = () => {
                   שיר מאת אנה אחמטובה
                 </cite>
               </div>
-              <div className="flex justify-center mx-4">
+              <div className="flex justify-center mx-4 animate-slide-inwards-right ">
                 <Image
-                  src="/assets/images/PoemsIllustration1.jpg" // Replace with the path to your illustration
+                  src="/assets/images/PoemsIllustration1.jpg"
                   alt="Illustration for the poem"
-                  width={640} // Adjust the size as needed
-                  height={360} // Adjust the size as needed
-                  className="rounded-lg"
+                  width={640}
+                  height={360}
+                  className="rounded-lg "
                 />
               </div>
             </div>

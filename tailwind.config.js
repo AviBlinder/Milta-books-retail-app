@@ -19,11 +19,22 @@ module.exports = {
           '0%': { transform: 'translateY(-30px)' },
           '100%': { transform: 'translateY(0)' },
         },
+        slideInwardsLeft: {
+          '0%': { transform: 'translateX(-60px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideInwardsRight: {
+          '0%': { transform: 'translateX(60px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
       animation: {
         'slide-down': 'slideDown 0.8s ease-out',
+        'slide-inwards-left': 'slideInwardsLeft 0.8s ease-out',
+        'slide-inwards-right': 'slideInwardsRight 0.8s ease-out',
       },
       colors: {
+        // Brown Palette
         primary: {
           900: '#572508',
           800: '#77340D',
