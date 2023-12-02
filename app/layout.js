@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import { bellefair } from './fonts';
 
 import './globals.css';
@@ -14,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={bellefair.className}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
