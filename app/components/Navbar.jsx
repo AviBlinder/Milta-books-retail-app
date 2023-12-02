@@ -54,6 +54,8 @@ export default function Navbar() {
             <span className="sr-only">Milta Books</span>
             <img
               className="ml-2 md:ml-4 h-12 w-auto rounded-full"
+              width="100%"
+              height="auto"
               src="assets/icons/MiltaLogo.png"
               alt="Milta Books Logo"
             />
@@ -112,6 +114,8 @@ export default function Navbar() {
               <img
                 className="h-12 w-auto rounded-full"
                 src="assets/icons/MiltaLogo.png"
+                width="100%"
+                height="auto"
                 alt="Milta Books Logo"
               />
             </Link>

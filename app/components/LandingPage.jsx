@@ -67,6 +67,7 @@ const LandingPage = () => {
           <img
             className="hidden md:block absolute bottom-0 h-full w-screen"
             src="/assets/images/Wave.png"
+            alt="Wave Effect on bottom of page"
           ></img>
         </div>
       </div>
