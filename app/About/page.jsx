@@ -1,8 +1,19 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
+
 import { FaFacebook, FaPhoneAlt } from 'react-icons/fa';
 import { MdOutlineMail } from 'react-icons/md';
+const MapSidebar = dynamic(() => import('@/app/components/MapSidebar'), {
+  ssr: false,
+});
 
 const About = () => {
+  const [isMapVisible, setIsMapVisible] = useState(false);
+  const toggleMap = () => {
+    setIsMapVisible(!isMapVisible);
+  };
+
   const divStyle = {
     backgroundColor: '#191919',
     color: '#D8D355',
@@ -23,42 +34,53 @@ const About = () => {
               className="rounded-lg shadow-md h-full object-cover"
             />
           </div>
-          <div className="col-span-1 " style={divStyle}>
-            <div className="grid grid-rows-1 mt-16 md:mt-28 md:grid-rows-8 animate-slide-down">
+          <div className="col-span-1" style={divStyle}>
+            <div className="grid grid-rows-1 mt-8 md:mt-28 md:grid-rows-8 animate-slide-down">
               <div className="row-span-1 row-start-1 md:row-span-2 md:row-start-4 ">
                 <div className="flex justify-center items-center ">
                   <h3 className="text-2xl md:text-5xl"> החנות ברחובות</h3>
                 </div>
               </div>
               <div className=" row-span-1 md:row-span-4">
-                <div className="flex flex-row justify-center mt-1 md:mt-6 md:flex-row">
-                  <div className="flex items-center px-10 flex-col pt-4 md:pt-10">
-                    <div>
-                      <h3 className=" text-xl md:text-2xl text-left">
-                        {' '}
-                        Yaakov 26 Street
-                      </h3>
+                <div className="flex flex-col">
+                  <div className="flex flex-row justify-center mt-1 md:mt-6">
+                    <div className="flex items-center px-10 flex-col pt-4 md:pt-10">
+                      <div>
+                        <h3 className=" text-xl md:text-2xl text-left">
+                          {' '}
+                          Yaakov 26 Street
+                        </h3>
+                      </div>
+                      <div>
+                        <h3 className="text-xl md:text-2xl text-left">
+                          {' '}
+                          Rehovot, Israel
+                        </h3>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl md:text-2xl text-left">
-                        {' '}
-                        Rehovot, Israel
-                      </h3>
+                    <div className="flex items-center px-10 flex-col pt-4 md:pt-10">
+                      <div>
+                        <h3 className=" text-xl md:text-2xl text-right">
+                          {' '}
+                          רח' יעקב 26
+                        </h3>
+                      </div>
+                      <div>
+                        <h3 className="text-xl md:text-2xl text-right">
+                          {' '}
+                          רחובות, ישראל
+                        </h3>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center px-10 flex-col pt-4 md:pt-10">
-                    <div>
-                      <h3 className=" text-xl md:text-2xl text-right">
-                        {' '}
-                        רח' יעקב 26
-                      </h3>
-                    </div>
-                    <div>
-                      <h3 className="text-xl md:text-2xl text-right">
-                        {' '}
-                        רחובות, ישראל
-                      </h3>
-                    </div>
+                  <div className="flex justify-center mt-6 md:mt-24">
+                    <button
+                      onClick={toggleMap}
+                      className="px-5 md:px-7 py-1 md:py-1 bg-white rounded-xl text-center text-xl md:text-2xl
+                    text-black"
+                    >
+                      מפת הגעה
+                    </button>
                   </div>
                 </div>
               </div>
@@ -121,6 +143,12 @@ const About = () => {
               className="rounded-lg shadow-md h-full object-cover"
             />
           </div>
+        </div>
+        <div className="shadow-lg border-gray-400 p-2">
+          <MapSidebar
+            isMapVisible={isMapVisible}
+            onClose={() => setIsMapVisible(false)}
+          />
         </div>
       </div>
     </div>
