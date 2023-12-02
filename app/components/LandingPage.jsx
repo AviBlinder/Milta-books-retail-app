@@ -20,7 +20,7 @@ const LandingPage = () => {
   return (
     <>
       <div
-        className="flex min-h-screen flex-col items-center justify-center bg-gray-900"
+        className="flex min-h-screen flex-col items-center justify-center bg-amber-100"
         id="Home"
       >
         <div className="relative w-full flex-grow overflow-hidden">
