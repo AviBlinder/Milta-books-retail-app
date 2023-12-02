@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { track } from '@vercel/analytics';
+
 const LandingPage = () => {
   return (
     <div
@@ -36,7 +38,14 @@ const LandingPage = () => {
             text-4xl px-8 py-4 rounded-xl text-amber-200 hover:bg-[#6e4e43] bg-[#6e4e43]/90
             hover:cursor-pointer"
           >
-            <Link href="/About">בואו לבקר</Link>
+            <Link
+              onClick={() => {
+                track('VisitAbout');
+              }}
+              href="/About"
+            >
+              בואו לבקר
+            </Link>
           </div>
         </div>
 
