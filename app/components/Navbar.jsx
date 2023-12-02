@@ -7,10 +7,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navigation = [
-  { name: 'אודות', href: 'about' },
-  { name: 'שיר השבוע', href: 'poem' },
-  { name: 'אירועים', href: 'events' },
-  { name: 'מומלצים', href: 'recommended-books' },
+  { name: 'אודות', href: 'About' },
+  { name: 'שיר השבוע', href: 'Poem' },
+  { name: 'אירועים', href: 'Events' },
+  { name: 'מומלצים', href: 'Recommended' },
 ];
 
 export default function Navbar() {
