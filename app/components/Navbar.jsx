@@ -53,7 +53,7 @@ export default function Navbar() {
           <Link href="/">
             <span className="sr-only">Milta Books</span>
             <img
-              className="h-12 w-auto rounded-full"
+              className="ml-2 md:ml-4 h-12 w-auto rounded-full"
               src="assets/icons/MiltaLogo.png"
               alt="Milta Books Logo"
             />
@@ -63,11 +63,13 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+            className="mr-2.5 inline-flex items-center justify-center p-2.5 text-gray-400
+            bg-white rounded-full
+            "
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6 text-gray-900" aria-hidden="true" />
+            <Bars3Icon className="h-6 w-6 text-gray-900 " aria-hidden="true" />
           </button>
         </div>
         {/* Desktop Menu  */}
@@ -109,7 +111,7 @@ export default function Navbar() {
             <Link href="/" className="-m-1.5 p-4">
               <span className="sr-only">Milta Books</span>
               <img
-                className="h-8 w-auto rounded-full"
+                className="h-12 w-auto rounded-full"
                 src="assets/icons/MiltaLogo.png"
                 alt="Milta Books Logo"
               />
