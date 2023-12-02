@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import client from '@/utils/contentfulClient';
-// import { useEffect, useState } from 'react';
+import { convertNumbers } from '@/utils/convertNumbers';
 
 const people = [
   {
@@ -22,30 +22,6 @@ const people = [
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
   },
 ];
-const convertNumbers = (number) => {
-  switch (number) {
-    case 1:
-      return '';
-    case 2:
-      return 'שני';
-    case 3:
-      return 'שלושת';
-    case 4:
-      return 'ארבעת';
-    case 5:
-      return 'חמשת';
-    case 6:
-      return 'ששת';
-    case 7:
-      return 'שבעת';
-    case 8:
-      return 'שמונת';
-    case 9:
-      return 'תשעת';
-    default:
-      return number;
-  }
-};
 export default function RecommendedBooks({ recommendationItems }) {
   console.log('recommendationItems:', recommendationItems.length);
   const getAssetURL = async (asset) => {
