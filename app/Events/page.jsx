@@ -30,7 +30,7 @@ const EventsComponent = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex flex-col justify-evenly animate-slide-down">
+          <div className="flex flex-col justify-evenly animate-slide-inwards-left">
             <div className="mt-0 sm:mt-2 mr-5 sm:mr-28">
               <h1 className="text-2xl font-bold">POSTER-MAKING CONTEST</h1>
               <h3 className="text-xl font-normal">
@@ -63,14 +63,14 @@ const EventsComponent = () => {
           </div>
 
           <div className="hidden md:grid grid-cols-6 gap-1 shadow-lg">
-            <div className="col-span-3 animate-slide-down ">
+            <div className="col-span-3">
               <img
                 src="/assets/images/JazzEvent1.jpg"
                 alt="Events"
                 className="rounded-lg shadow-md h-full object-cover"
               />
             </div>
-            <div className="col-span-3 animate-slide-down">
+            <div className="col-span-3">
               <img
                 src="/assets/images/Event2.jpg"
                 alt="Events"
