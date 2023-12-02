@@ -1,5 +1,19 @@
 import React from 'react';
-import Head from 'next/head';
+export const metadata = {
+  title: 'Upcoming Events at Milta Books - Join the Literary Community',
+  description:
+    'Stay updated with the latest events at Milta Books. From our Jazz evenings to meeting award-winning poets, there is always something exciting happening. Join our literary community today!',
+  // content=", , , , , "
+  keywords: [
+    'Milta Books Events',
+    'Bookstore Events',
+    'Literary Events',
+    'Reading Sessions',
+    'Community Events',
+    'Poetry  Events',
+    'Jazz Events',
+  ],
+};
 
 const events = [
   {
@@ -22,20 +36,6 @@ const events = [
 const EventsComponent = () => {
   return (
     <>
-      <Head>
-        <title>
-          Upcoming Events at Milta Books - Join the Literary Community
-        </title>
-        <meta
-          name="description"
-          content="Stay updated with the latest events at Milta Books. From our Jazz evenings to meeting award-winning poets, there's always something exciting happening. Join our literary community today!"
-        />
-        <meta
-          name="keywords"
-          content="Milta Books Events, Bookstore Events, Literary Events, Reading Sessions, Community Events, Music and Jazz Events"
-        />
-      </Head>
-
       <div className="bg-bridal-900" id="Events">
         <div
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:flex lg:flex-col lg:items-center

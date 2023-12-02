@@ -1,24 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Head from 'next/head';
-
 import { track } from '@vercel/analytics';
+
+export const metadata = {
+  title: 'Milta Books - Your Gateway to Literary Wonders',
+  description:
+    'Explore the world of literature with Milta Books. Discover our curated selection of books, exclusive events, and literary insights. Dive into your next great read today!',
+  keywords: [
+    'Milta Books',
+    'Bookstore',
+    'Literary Collections',
+    'Bestsellers',
+    'Poetry',
+    'Book Recommendations',
+  ],
+};
 
 const LandingPage = () => {
   return (
     <>
-      <Head>
-        <title>Milta Books - Your Gateway to Literary Wonders</title>
-        <meta
-          name="description"
-          content="Explore the world of literature with Milta Books. Discover our curated selection of books, exclusive events, and literary insights. Dive into your next great read today!"
-        />
-        <meta
-          name="keywords"
-          content="Milta Books, Bookstore, Literary Collections, Bestsellers, Book Recommendations"
-        />
-      </Head>
-
       <div
         className="flex min-h-screen flex-col items-center justify-center bg-gray-900"
         id="Home"

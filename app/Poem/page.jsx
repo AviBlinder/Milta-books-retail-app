@@ -1,22 +1,23 @@
 import Image from 'next/image';
 import React from 'react';
-import Head from 'next/head';
+
+export const metadata = {
+  title: 'Poem of the Week at Milta Books - Literary Inspiration',
+  description:
+    'Delve into our featured poem of the week by renowned poet Anna Akhmatova. Experience the depth of words and emotions at Milta Books, your literary retreat.',
+  keywords: [
+    'Milta Books Poetry',
+    'Weekly Poem',
+    'Weekly Selected Story',
+    'Literary Inspiration',
+    'Poetry Collection',
+    'Anna Akhmatova',
+  ],
+};
 
 const PoemPage = () => {
   return (
     <>
-      <Head>
-        <title>Poem of the Week at Milta Books - Literary Inspiration</title>
-        <meta
-          name="description"
-          content="Delve into our featured poem of the week by renowned poet Anna Akhmatova. Experience the depth of words and emotions at Milta Books, your literary retreat."
-        />
-        <meta
-          name="keywords"
-          content="Milta Books Poetry, Weekly Poem, Literary Inspiration, Anna Akhmatova, Poetry Collection"
-        />
-      </Head>
-
       <div className="bg-bridal-900">
         <div
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:flex lg:flex-col lg:items-center

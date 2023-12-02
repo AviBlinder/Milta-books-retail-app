@@ -1,13 +1,26 @@
 'use client';
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-// import { Metadata } from 'next';
 
 import { FaFacebook, FaPhoneAlt } from 'react-icons/fa';
 import { MdOutlineMail } from 'react-icons/md';
 const MapSidebar = dynamic(() => import('@/app/components/MapSidebar'), {
   ssr: false,
 });
+
+// export const metadata = {
+//   title: 'About Milta Books - Discover Our Story in Rehovot, Israel',
+//   description:
+//     'Get to know Milta Books, a cornerstone of literature and culture in Rehovot, Israel. Located at Yaakov 26 Street, we are your local hub for books, community events, and literary exploration.',
+//   keywords: [
+//     'About Milta Books',
+//     'Rehovot Bookstore',
+//     'Local Bookstore Israel',
+//     'Milta Books Location',
+//     'Music and Poetry Events',
+//     'Milta Address and Contact Details',
+//   ],
+// };
 
 const About = () => {
   const [isMapVisible, setIsMapVisible] = useState(false);
@@ -22,18 +35,6 @@ const About = () => {
 
   return (
     <>
-      <Head>
-        <title>About Milta Books - Discover Our Story in Rehovot, Israel</title>
-        <meta
-          name="description"
-          content="Get to know Milta Books, a cornerstone of literature and culture in Rehovot, Israel. Located at Yaakov 26 Street, we are your local hub for books, community events, and literary exploration."
-        />
-        <meta
-          name="keywords"
-          content="About Milta Books, Rehovot Bookstore, Local Bookstore Israel, Milta Books Location, Music and Poetry Events"
-        />
-      </Head>
-
       <div style={divStyle}>
         <div
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:flex lg:flex-col lg:items-center
