@@ -7,8 +7,6 @@ import WeeklyPoem from '@/app/components/WeeklyPoem';
 import { usePathname } from 'next/navigation';
 
 export default function Landing() {
-  console.log('usePathname=', usePathname());
-
   return (
     <div className="bg-bridal-900">
       <LandingPage />
