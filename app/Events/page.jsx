@@ -1,9 +1,10 @@
 import React from 'react';
+import client from '@/utils/contentfulClient';
+
 export const metadata = {
   title: 'Upcoming Events at Milta Books - Join the Literary Community',
   description:
     'Stay updated with the latest events at Milta Books. From our Jazz evenings to meeting award-winning poets, there is always something exciting happening. Join our literary community today!',
-  // content=", , , , , "
   keywords: [
     'Milta Books Events',
     'Bookstore Events',
@@ -15,25 +16,22 @@ export const metadata = {
   ],
 };
 
-const events = [
-  {
-    title: 'POSTER-MAKING CONTEST',
-    description:
-      'Join our annual celebration of all things art and literature. Winners will be announced on August 31. Click here for more details.',
-  },
-  {
-    title: 'MEET AND GREET STELLA ORNELAS',
-    description:
-      'Award-winning poet Stella Ornelas is dropping by on March 10, 7 PM. She will be reading from her new collection, Spring, and signing copies. Buy tickets now!',
-  },
-  {
-    title: 'STORY TIME WITH FRIENDS',
-    description:
-      "Read books and spend time with kids for an afternoon in an event hosted by the Lily River Children's Foundation. Volunteer now.",
-  },
-];
+export const revalidate = 604800;
+export async function fetchEvents() {
+  try {
+    const response = await client.getEntries({
+      content_type: 'events',
+    });
+    console.log('response.items :', response.items);
+    return response.items;
+  } catch (error) {
+    console.log('error =', error);
+    return [];
+  }
+}
 
-const EventsComponent = () => {
+const EventsComponent = async () => {
+  const events = await fetchEvents();
   return (
     <>
       <div className="bg-bridal-900" id="Events">
@@ -47,36 +45,25 @@ const EventsComponent = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col justify-evenly animate-slide-inwards-left">
-              <div className="mt-0 sm:mt-2 mr-5 sm:mr-28">
-                <h1 className="text-2xl font-bold">POSTER-MAKING CONTEST</h1>
-                <h3 className="text-xl font-normal">
-                  {' '}
-                  Join our annual celebration of all things art and literature.
-                  Winners will be announced on August 31. Click here for more
-                  details.
-                </h3>
-              </div>
-              <div className="mt-4 sm:mt-2 mr-5 sm:mr-28">
-                <h1 className="text-2xl font-bold">
-                  {' '}
-                  MEET AND GREET STELLA ORNELAS
-                </h1>
-                <h3 className="text-xl font-normal">
-                  {' '}
-                  Award-winning poet Stella Ornelas is dropping by on March 10,
-                  7 PM. She will be reading from her new collection, Spring, and
-                  signing copies. Buy tickets now!
-                </h3>
-              </div>
-              <div className="mt-4 sm:mt-2 mr-5 sm:mr-28 mb-4 sm:mb-0">
-                <h1 className="text-2xl font-bold">STORY TIME WITH FRIENDS</h1>
-                <h3 className="text-xl font-normal">
-                  {' '}
-                  Read books and spend time with kids for an afternoon in an
-                  event hosted by the Lily River Children's Foundation.
-                  Volunteer now.
-                </h3>
-              </div>
+              {events.map((event, index) => (
+                <div
+                  key={index}
+                  className="mt-0 sm:mt-2 mr-5 sm:mr-28 shadow-md p-2 md:p-4"
+                >
+                  <h1 className="text-2xl md:text-3xl font-bold text-right tracking-wide">
+                    {event.fields.title}
+                  </h1>
+                  <div className="text-xl md:text-2xl font-normal tracking-wide">
+                    {event.fields.eventDescription.content.map((content) =>
+                      content.content.map((paragraph, index) => (
+                        <p className="mr-2  " dir="rtl" key={index}>
+                          {paragraph.value}
+                        </p>
+                      ))
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="hidden md:grid grid-cols-6 gap-1 shadow-lg">
