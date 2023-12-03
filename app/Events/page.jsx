@@ -22,7 +22,6 @@ export async function fetchEvents() {
     const response = await client.getEntries({
       content_type: 'events',
     });
-    console.log('response.items :', response.items);
     return response.items;
   } catch (error) {
     console.log('error =', error);

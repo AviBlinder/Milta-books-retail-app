@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import client from '@/utils/contentfulClient';
 
 export const metadata = {
   title: 'Poem of the Week at Milta Books - Literary Inspiration',
@@ -14,8 +15,21 @@ export const metadata = {
     'Anna Akhmatova',
   ],
 };
+export async function fetchPoem() {
+  try {
+    const response = await client.getEntries({
+      content_type: 'poem',
+    });
+    return response.items;
+  } catch (error) {
+    console.log('error =', error);
+    return [];
+  }
+}
 
-const PoemPage = () => {
+const PoemPage = async () => {
+  const weeklyPoem = await fetchPoem();
+
   return (
     <>
       <div className="bg-bridal-900">
@@ -24,52 +38,61 @@ const PoemPage = () => {
        lg:justify-between pb-8 "
         >
           <div className=" my-2 text-white min-h-screen flex flex-col items-center justify-center p-4">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <h1
                 className="text-5xl font-bold mb-6 text-center text-amber-600"
                 id="WeeklyPoem"
               >
                 שיר השבוע
               </h1>
-              <div className="flex flex-col md:flex-row">
-                <div className="bg-gray-800 p-8 rounded-lg shadow-lg mb-6 max-h-7xl animate-slide-inwards-left">
-                  <p className="text-lg mb-4 text-right ">
-                    <span>,</span>
-                    בְּמָה רַע זְמַן זֶה מִזְמַנִּים שֶׁקָדְמוּ לוֹ? הַלוּמֵי
-                    קְרָב
-                    <br />
-                    יָגוֹן וּפְחָדִים מִשַׁשְׁנוּ פְּצָעִים זְוָעָתִיִּים
-                    שֶׁזֹּהֲמוּ
-                    <br />
-                    וְיָדֵינוּ לֹא הֵבִיאוּ שׁוּם מַרְפֵּא. בַּמַּעֲרָב אוֹר
-                    הַשְׁקִיעָה
-                    <br />
-                    <span>,</span>
-                    עוֹד מְלַהֵט, וְאֶשְׁכּוֹלוֹת שֶׁל גַּגּוֹת בּוֹהֲקִים
-                    בַּשֶׁמֶשׁ
-                    <br />
-                    <span>,</span>
-                    אַךְ כָּאן הַמָּוֶת כְּבָר עוֹבֵר וּמְסַמֶּן X עַל דְּלָתוֹת
-                    <br />
-                    <span>.</span>
-                    וְקוֹרֵא לָעוֹרְבִים, וְהָעוֹרְבִים בָּאִים
-                    <br />
-                  </p>
-                  <cite className="block text-right text-sm">
+              {weeklyPoem.map((poem, poemIndex) => (
+                <div key={poemIndex} className="flex flex-col md:flex-row ">
+                  <div className="bg-gray-800 p-8 rounded-lg shadow-lg mb-6 max-h-7xl animate-slide-inwards-left">
                     {' '}
-                    שיר מאת אנה אחמטובה
-                  </cite>
+                    {poem.fields.poem.content.map((paragraph, index) =>
+                      paragraph.content.map((line, lineIndex) => (
+                        <p
+                          key={lineIndex}
+                          dir="rtl"
+                          className="text-xl md:text-2xl mb-4 text-right text-semibold text-amber-200"
+                        >
+                          {line.value}
+                        </p>
+                      ))
+                    )}
+                    <p
+                      dir="rtl"
+                      className="italic text-xl md:text-2xl mb-4 text-right text-semibold  text-amber-200"
+                    >
+                      {poem.fields.poemName}
+                    </p>
+                    <p
+                      dir="rtl"
+                      className="mt-2 italic text-xl md:text-2xl mb-4 text-right text-semibold  text-amber-200"
+                    >
+                      איור: {poem.fields.illustrationName}
+                    </p>
+                  </div>
+                  <div
+                    className="relative max-h-screen w-[25vw] 
+                  flex justify-center mx-4 animate-slide-inwards-right "
+                  >
+                    <Image
+                      src={`https:${poem.fields.illustration.fields.file.url}`}
+                      alt={`${poem.fields.illustration.fields.file.fileName}`}
+                      fill
+                      // width={
+                      //   poem.fields.illustration.fields.file.details.image.width
+                      // }
+                      // height={
+                      //   poem.fields.illustration.fields.file.details.image
+                      //     .height
+                      // }
+                      className="rounded-lg "
+                    />
+                  </div>
                 </div>
-                <div className="flex justify-center mx-4 animate-slide-inwards-right ">
-                  <Image
-                    src="/assets/images/PoemsIllustration1.jpg"
-                    alt="Illustration for the poem"
-                    width={640}
-                    height={360}
-                    className="rounded-lg "
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

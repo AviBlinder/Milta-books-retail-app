@@ -17,7 +17,6 @@ export async function getRecommendations() {
     const response = await client.getEntries({
       content_type: 'recommendations',
     });
-    console.log('response.items :', response.items);
     return response.items;
   } catch (error) {
     console.log('error =', error);
