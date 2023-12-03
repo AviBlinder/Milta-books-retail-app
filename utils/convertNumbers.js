@@ -19,6 +19,6 @@ export const convertNumbers = (number) => {
     case 9:
       return 'תשעת';
     default:
-      return number;
+      return '';
   }
 };
